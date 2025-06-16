@@ -1,0 +1,107 @@
+body {
+  font-family: "Comic Sans MS", cursive;
+  background: #fffdf9;
+  color: #444;
+  margin: 10% auto;
+  max-width: 1200px;
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-content: center; */
+  justify-content: center;
+  padding-inline: 20px;
+  gap: 20px;
+}
+
+.pricing-plan {
+  flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+  min-height: 600px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #f9c6d3; /* rosa bebê */
+  border: 2px solid #f06aa6; /* rosa chiclete */
+  border-radius: 10px;
+  /* width: 30%; */
+  text-align: center;
+  box-shadow: 0 0 8px #f06aa6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 0 20px 0;
+}
+
+.highlight {
+  background: #fde38d; /* amarelo girassol */
+  border-color: #f06aa6;
+  transform: scale(1.05);
+}
+
+.plan-title {
+  font-family: "Roboto", system-ui;
+  background-color: #f06aa6;
+  padding: 30px 0;
+  margin: 0%;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #736af0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 10px; */
+}
+
+.plan-price {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  color: #eb13eb;
+  margin-bottom: 10px;
+}
+
+.plan-features {
+  padding: 2px 20px;
+  text-align: left
+}
+.plan-features li {
+  font-family: "Poiret One", sans-serif;
+  font-size:large;
+  font-weight: 800;
+  list-style-type: none;
+  margin: 8px 0;
+  text-align: left;
+}
+.plan-features li::before {
+  content: "-  ";
+  color: #f06aa6;
+}
+
+.plan-button {
+  margin-top: auto;
+  background: #f06aa6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s ease;
+  width: 60%;
+  align-self: center;
+}
+
+.plan-button:hover {
+  background: #d94c88;
+}
+
+@media (max-width: 800px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-plan {
+    width: 90%;
+  }
+}
