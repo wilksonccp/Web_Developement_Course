@@ -1,23 +1,22 @@
 body {
-  font-family: "Comic Sans MS", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* para ocupar toda a altura da tela */
+  margin: 0;
   background: #fffdf9;
-  color: #444;
-  margin: 10% auto;
-  max-width: 1200px;
 }
 
 .pricing-container {
   display: flex;
-  flex-wrap: wrap;
-  /* align-content: center; */
+  flex-wrap: wrap; /* Permite que os planos se movam para a próxima linha se não houver espaço */
   justify-content: center;
-  padding-inline: 20px;
-  gap: 20px;
+  gap: 2rem;
 }
 
 .pricing-plan {
   flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
-  min-height: 600px;
+  min-height: 400px;
   max-width: 350px;
   display: flex;
   flex-direction: column;
@@ -25,18 +24,17 @@ body {
   background: #f9c6d3; /* rosa bebê */
   border: 2px solid #f06aa6; /* rosa chiclete */
   border-radius: 10px;
-  /* width: 30%; */
   text-align: center;
   box-shadow: 0 0 8px #f06aa6;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 0 0 20px 0;
 }
 
-.highlight {
-  background: #fde38d; /* amarelo girassol */
+/*.highlight {
+  background: #fde38d; amarelo girassol
   border-color: #f06aa6;
   transform: scale(1.05);
-}
+}*/
 
 .plan-title {
   font-family: "Roboto", system-ui;
@@ -62,7 +60,7 @@ body {
 
 .plan-features {
   padding: 2px 20px;
-  text-align: left
+  text-align: left;
 }
 .plan-features li {
   font-family: "Poiret One", sans-serif;
@@ -103,5 +101,11 @@ body {
 
   .pricing-plan {
     width: 90%;
+    min-width: 350px;
+    min-height: auto;
+  }
+
+  .plan-button{
+    width: auto;
   }
 }
